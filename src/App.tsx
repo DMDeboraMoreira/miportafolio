@@ -9,6 +9,7 @@ import {
   Footer,
 } from "./components";
 import FadeIn from './components/FadeIn';
+import WhatsAppButton from './components/WhatsAppButton';
 import './index.scss';
 
 function App() {
@@ -32,11 +33,12 @@ function App() {
         <FadeIn transitionDuration={700}>
             <Main/>
             <Expertise/>
-            <Timeline/>
+            <Timeline mode={mode}/>
             <Project/>
             <Contact/>
         </FadeIn>
         <Footer />
+        <WhatsAppButton />
     </div>
     );
 }

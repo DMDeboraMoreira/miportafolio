@@ -1,91 +1,95 @@
 import React from "react";
-import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faNodeJs, faWordpress } from '@fortawesome/free-brands-svg-icons';
+import { faRobot } from '@fortawesome/free-solid-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
-const labelsFirst = [
-    "React",
-    "TypeScript",
-    "JavaScript",
-    "HTML5",
-    "CSS3",
-    "SASS",
-    "Flask",
-    "Python",
-    "SQL",
-    "PostgreSQL",
-    "Postman"
-];
-
-const labelsSecond = [
-    "Git",
-    "GitHub Actions",
-    "Docker",
-    "AWS",
-    "Azure",
-    "Linux",
-    "Snowflake",
-    "Pandas",
-    "Selenium",
-];
-
-const labelsThird = [
-    "OpenAI",
-    "Groq",
-    "LangChain",
-    "Qdrant",
-    "Hugging Face",
-    "LlamaIndex",
-    "Streamlit",
-];
+const frontendTechs = ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "SASS"];
+const backendTechs = ["Node.js", "Express", "PostgreSQL", "MongoDB", "JWT", "Jest", "REST API"];
+const toolsTechs = ["Git", "GitHub", "Postman", "VS Code", "SCRUM", "WordPress"];
+const aiTechs = ["n8n", "OpenRouter", "Synthesia", "Brandwatch", "MCP", "IA Generativa"];
 
 function Expertise() {
-    return (
+  return (
     <div className="container" id="expertise">
-        <div className="skills-container">
-            <h1>Expertise</h1>
-            <div className="skills-grid">
-                <div className="skill">
-                    <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>Full Stack Web Development</h3>
-                    <p>I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsFirst.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
+      <div className="skills-container">
+        <h1>Mis Tecnologías</h1>
+        <p className="section-subtitle">Stack técnico y herramientas que uso en el día a día.</p>
+        <div className="skills-grid">
 
-                <div className="skill">
-                    <FontAwesomeIcon icon={faDocker} size="3x"/>
-                    <h3>DevOps & Automation</h3>
-                    <p>Once the application is built, I help clients set up DevOps testing, CI/CD pipelines, and deployment automation to support the successful Go-Live.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsSecond.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
-
-                <div className="skill">
-                    <FontAwesomeIcon icon={faPython} size="3x"/>
-                    <h3>GenAI & LLM</h3>
-                    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsThird.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
+          <div className="skill-card">
+            <div className="skill-icon">
+              <FontAwesomeIcon icon={faReact} size="2x" />
             </div>
+            <h3>Frontend</h3>
+            <p>
+              Construyo interfaces dinámicas y accesibles con React y Next.js,
+              con foco en rendimiento, diseño responsive y componentes reutilizables.
+            </p>
+            <div className="flex-chips">
+              <span className="chip-title">Tech stack:</span>
+              {frontendTechs.map((tech, index) => (
+                <Chip key={index} className="chip" label={tech} />
+              ))}
+            </div>
+          </div>
+
+          <div className="skill-card">
+            <div className="skill-icon">
+              <FontAwesomeIcon icon={faNodeJs} size="2x" />
+            </div>
+            <h3>Backend</h3>
+            <p>
+              Desarrollo APIs REST robustas con Node.js y Express, gestión de bases de datos
+              SQL y NoSQL, autenticación con JWT y testing con Jest.
+            </p>
+            <div className="flex-chips">
+              <span className="chip-title">Tech stack:</span>
+              {backendTechs.map((tech, index) => (
+                <Chip key={index} className="chip" label={tech} />
+              ))}
+            </div>
+          </div>
+
+          <div className="skill-card">
+            <div className="skill-icon">
+              <FontAwesomeIcon icon={faWordpress} size="2x" />
+            </div>
+            <h3>Herramientas & CMS</h3>
+            <p>
+              Control de versiones con Git, gestión y optimización de sitios WordPress,
+              testing de APIs con Postman y trabajo en equipo con metodologías ágiles.
+            </p>
+            <div className="flex-chips">
+              <span className="chip-title">Tech stack:</span>
+              {toolsTechs.map((tech, index) => (
+                <Chip key={index} className="chip" label={tech} />
+              ))}
+            </div>
+          </div>
+
+          <div className="skill-card skill-card--highlight">
+            <div className="skill-icon">
+              <FontAwesomeIcon icon={faRobot} size="2x" />
+            </div>
+            <h3>IA & Automatización</h3>
+            <p>
+              Diseño e implementación de flujos automatizados con n8n, integración de
+              modelos de IA vía OpenRouter y generación de contenido con Synthesia y Brandwatch.
+            </p>
+            <div className="flex-chips">
+              <span className="chip-title">Tech stack:</span>
+              {aiTechs.map((tech, index) => (
+                <Chip key={index} className="chip" label={tech} />
+              ))}
+            </div>
+          </div>
+
         </div>
+      </div>
     </div>
-    );
+  );
 }
 
 export default Expertise;
