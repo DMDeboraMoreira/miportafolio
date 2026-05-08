@@ -30,9 +30,9 @@ function Main() {
                 <span>debomoreira243@gmail.com</span>
               </a> */}
           </div>
-          <p className="role">Hola, soy</p>
+          <p className="greeting">Hola, soy</p>
           <h1>Débora Moreira</h1>
-          <p className="role">Desarrolladora Full Stack </p>
+          <p className="greeting">Desarrolladora Full Stack</p>
 
           {/* <p className="bio">
             Construyo interfaces modulares y escalables con <strong>React</strong> y <strong>Next.js</strong>,
