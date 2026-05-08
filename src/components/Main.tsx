@@ -25,10 +25,14 @@ function Main() {
             <a href="https://mail.google.com/mail/?view=cm&to=debomoreira243@gmail.com" target="_blank" rel="noreferrer" aria-label="Email">
               <EmailIcon />
             </a>
+            {/* <a href="mailto:debomoreira243@gmail.com" className="contact-link">
+                <span className="contact-link-icon"><EmailIcon /></span>
+                <span>debomoreira243@gmail.com</span>
+              </a> */}
           </div>
-          <p className="greeting">Hola, soy</p>
+          <p className="role">Hola, soy</p>
           <h1>Débora Moreira</h1>
-          <p className="role">Full Stack Developer </p>
+          <p className="role">Desarrolladora Full Stack </p>
 
           {/* <p className="bio">
             Construyo interfaces modulares y escalables con <strong>React</strong> y <strong>Next.js</strong>,
